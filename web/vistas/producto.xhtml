@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Registro de Productos</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Producto:" for="producto"/>
+                <h:inputText id="producto" label="Producto" required="true" value="#{productosManagerBean.producto}"/>
+                
+                <h:outputLabel value="Categoria:" for="categoria"/>
+                <h:selectOneMenu id="categoria" label="Categoria" value="#{productosManagerBean.categoria}">
+                    <f:selectItem itemLabel="-selecione-" itemValue=""/>
+                    <f:selectItem itemLabel="Bebias" itemValue="Bebias"/>
+                    <f:selectItem itemLabel="Enlatados" itemValue="Enlatados"/>
+                    <f:selectItem itemLabel="Galletas" itemValue="Galletas"/>
+                    <f:selectItem itemLabel="Dulces" itemValue="Dulces"/>
+                </h:selectOneMenu>
+                
+                <h:outputLabel value="Existencia:" for="existencia"/>
+                <h:inputText id="existencia" label="Existencia" required="true" value="#{productosManagerBean.existencia}"/>
+                
+                <h:outputLabel value="Precio:" for="precio"/>
+                <h:inputText id="precio" label="Precio" required="true" size="2" value="#{productosManagerBean.precio}"/>
+                <h:panelGroup/>
+                <h:commandButton  value="Enviar" action="salida_producto"/>
+                
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

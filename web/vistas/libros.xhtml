@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Libros</title>
+    </h:head>
+    <h:body>
+        
+        <h1>Registro de Libros</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Titulo:" for="titulo"/>
+                <h:inputText id="titulo" label="Titulo" required="true" value="#{librosManagerBean.titulo}"/>
+                
+                
+                
+                <h:outputLabel value="Autor:" for="autor"/>
+                <h:inputText id="autor" label="Autor" required="true" value="#{librosManagerBean.autor}"/>
+                
+                <h:outputLabel value="Resumen:" for="resumen"/>
+                <h:inputTextarea id="resumen" label="Resumen" required="true"  value="#{librosManagerBean.resumen}"/>
+                
+                <h:outputLabel value="Medio:" for="medio"/>
+                
+                <h:selectOneRadio id="medio" label="Medio" value="#{librosManagerBean.medio}" >
+                    <f:selectItem itemLabel="Fisico" itemValue="fisico"/>
+                 
+                    <f:selectItem itemLabel="Magnetico" itemValue="magnetico"/>
+                    
+                </h:selectOneRadio>
+                <h:panelGroup/>
+                <h:commandButton id="enviar" value="Enviar" action="salida_libros"/>
+                
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Datos del Libro</h1>
+        
+       <h:panelGrid columns="2">
+            <h:outputLabel value="Titulo: "/>
+            <h:outputText value="#{librosManagerBean.titulo}"/>
+            
+            <h:outputLabel value="Autor: "/>
+            <h:outputText value="#{librosManagerBean.autor}"/>
+            
+            <h:outputLabel value="resumen: "/>
+            
+            <h:outputText  value="#{librosManagerBean.resumen}"/>
+ 
+            <h:outputLabel value="Medio: "/>
+            <h:outputText value="#{librosManagerBean.medio}"/>
+        </h:panelGrid>
+        <h:form>
+            <h:commandLink action="/index" value="Regresar pagina principal"/>
+        </h:form>
+    </h:body>
+</html>
+
